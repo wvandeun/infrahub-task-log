@@ -9,7 +9,7 @@ class TagDuplicator(InfrahubGenerator):
         name = data["BuiltinTag"]["edges"][0]["node"]["name"]["value"]
 
         for i in range(1, 206):
-            tag = await self.client.create("BuiltintTag", name=f"{name}{i}")
+            tag = await self.client.create("BuiltinTag", name=f"{name}{i}")
             await tag.save(allow_upsert=True)
             log.info(f"Created {name}{i}")
        
