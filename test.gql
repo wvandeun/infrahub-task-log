@@ -1,0 +1,11 @@
+query tag_query($name: String!) {
+  BuiltinTag(name__value: $name) {
+    edges {
+      node {
+	name {
+	  value
+	}
+      }
+    }
+  }
+}

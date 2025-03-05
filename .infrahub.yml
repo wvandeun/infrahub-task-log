@@ -1,0 +1,13 @@
+---
+generator_definitions:
+  - name: tag_duplicator
+    file_path: "test.py"
+    targets: tags
+    query: test_query
+    class_name: TagDuplicator
+    parameters:
+      name: "name__value"
+
+queries:
+  - name: test_query
+    file_path: ./test.gql
